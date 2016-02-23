@@ -1,0 +1,26 @@
+(define (cal-pascal-triangle row col)
+  (cond ((= row 1) 1)
+	((= col 1) 1)
+	((= row col) 1)
+	(else (+ (cal-pascal-triangle (- row 1) (- col 1))
+		  (cal-pascal-triangle (- row 1) col)))))
+
+;; line 1-4
+(cal-pascal-triangle 1 1)
+(cal-pascal-triangle 2 1)
+(cal-pascal-triangle 2 2)
+(cal-pascal-triangle 3 1)
+(cal-pascal-triangle 3 2)
+(cal-pascal-triangle 3 3)
+(cal-pascal-triangle 4 1)
+(cal-pascal-triangle 4 2)
+(cal-pascal-triangle 4 3)
+(cal-pascal-triangle 4 4)
+;; line 5
+(cal-pascal-triangle 5 1)
+(cal-pascal-triangle 5 2)
+(cal-pascal-triangle 5 3)
+(cal-pascal-triangle 5 4)
+(cal-pascal-triangle 5 5)
+
+(RESTART 1)

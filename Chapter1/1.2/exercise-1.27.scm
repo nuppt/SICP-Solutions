@@ -1,0 +1,20 @@
+;; 561, 1105, 1729, 2465, 2821, 6601
+(cd "./")
+(load "example-test-for-primality.scm")
+
+(define (check-carmichael-number n)
+  (define (congruent? a)
+    (= (expmod a n n) a))
+  (define (check-iter start n)
+    (cond ((= start n) true)
+	  ((not (congruent? start)) false)
+	  (else (check-iter (+ start 1) n))))
+  (check-iter 1 n))
+
+(check-carmichael-number 560)
+(check-carmichael-number 561)
+(check-carmichael-number 1105)
+(check-carmichael-number 1729)
+(check-carmichael-number 2465)
+(check-carmichael-number 2821)
+(check-carmichael-number 6601)

@@ -1,0 +1,17 @@
+(cd "./")
+(load "example-tree.scm")
+
+(define (pick-7-from-lists x)
+  (cond ((null? x) '())
+	((not (pair? x)) (if (= x 7) (list x) '()))
+	(else (append (pick-7-from-lists (car x))
+		      (pick-7-from-lists (cdr x))))))
+
+(define x1 (cons (cons 1 (cons 3 (cons 5 7))) 9))
+(define x2 (cons (cons 1 (cons 3 (cons 5 7))) 7))
+(define x3 (cons 7 7))
+(define x4 (cons 1 (cons 2 (cons 3 (cons 4 (cons 5 (cons 6 7)))))))
+(pick-7-from-lists x1)
+(pick-7-from-lists x2)
+(pick-7-from-lists x3)
+(pick-7-from-lists x4)
