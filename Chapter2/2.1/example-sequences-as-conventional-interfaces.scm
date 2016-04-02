@@ -48,7 +48,7 @@
 ;; 4. accumulate an operator on that set
 
 
-;; define filter on a sequence satisfy a predicate
+;; define filter on a sequence satisfing a predicate
 (define (filter predicate sequence)
   (cond ((null? sequence) nil)
 	((predicate (car sequence))
