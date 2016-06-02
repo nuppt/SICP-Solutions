@@ -1,5 +1,6 @@
 (cd "./")
 (load "example-huffman-encoding-trees.scm")
+(load "exercise-2.68.scm")
 
 (define (generate-huffman-tree pairs)
   (successive-merge (make-leaf-set pairs)))

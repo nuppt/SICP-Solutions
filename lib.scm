@@ -11,7 +11,7 @@
 (define get-Type
   (lambda (x)
     (cond ((number? x) "Number")
-	  ((pair? x) "Pair")
-	  ((string? x) "String")
-	  ((list? x) "List")
-	  (else "Unknown type"))))
+          ((pair? x) "Pair")
+          ((string? x) "String")
+          ((list? x) "List")
+          (else "Unknown type"))))
