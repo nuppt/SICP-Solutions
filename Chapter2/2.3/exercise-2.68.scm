@@ -39,5 +39,5 @@
 (encode '(A D A B B C A) tree)  ;; (0 1 1 0 0 1 0 1 0 1 1 1 0)
 (decode '(0 1 1 0 0 1 0 1 0 1 1 1 0) tree)  ;; (a d a b b c a)
 
-(encode '(A D F B) tree)  ;;bad symbol -- ENCODE-SYMBOL f
+;;(encode '(A D F B) tree)  ;;bad symbol -- ENCODE-SYMBOL f
 (untrace)
